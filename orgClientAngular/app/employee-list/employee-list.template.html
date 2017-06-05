@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="col-md-12">
+      <!--Body content-->
+      <h1>Employee List</h1>
+      <ul class="employees">
+        <li ng-repeat="employee in $ctrl.employees | orderBy:$ctrl.orderProp"
+            class="thumbnail employee-list-item">
+          <label class="col-md-4">{{employee.name}}</label>
+          <label class="col-md-4">{{employee.position}}</label>
+          <a type="button" href="#!/employees/{{employee.id}}" class="btn btn-default btn-info col-md-4">View</a>
+        </li>
+      </ul>
+
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Create new report!</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="form-group">
+        <label>Please select due date for this task</label>
+        <span>: {{$ctrl.task.due_date | date:'fullDate' }}</span>
+        <div style="min-height:290px;">
+            <div uib-datepicker ng-model="$ctrl.task.due_date" class="well well-sm"
+                 datepicker-options="$ctrl.datePickerOptions"></div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Enter task text:</label>
+        <textarea rows="6" class="form-control" ng-model="$ctrl.task.text"></textarea>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.save()">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+</div>

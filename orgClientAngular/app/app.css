@@ -1,0 +1,116 @@
+body {
+    min-width: 960px;
+    padding: 20px 60px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+textarea { resize: none; }
+
+.overflow-auto{
+    overflow: auto;
+}
+
+ul.thumbnail.list {
+    list-style: none;
+    min-height: 30px;
+    max-height: 500px;
+    padding: 10px 30px;
+    line-height: 200%;
+}
+
+ul.thumbnail.list li button {
+    padding: 0px 6px
+}
+
+.employee-profile {
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.employee-personal-detail label::after {
+    content: ":";
+}
+
+.employee-personal-detail label {
+    width: 100px;
+}
+
+
+
+dt {
+    float: left;
+    width: 100px;
+}
+
+dt::after {
+    content: ":";
+}
+
+dd {
+    width: 300px;
+    display: inline-block;
+    /*margin: 0 0 0 110px;*/
+    padding: 0 0 0.5em 0;
+}
+
+.no-entries-notification{
+    text-align: center;
+    display: block;
+    color: hsl(0, 1%, 74%);
+}
+/* View: employees list */
+.employees {
+    list-style: none;
+}
+
+.employees a.btn-info{
+    padding: 3px 12px;
+}
+
+.employees li {
+    clear: both;
+    height: 115px;
+    padding: 45px 30px;
+}
+
+.thumb {
+    float: left;
+    height: 100px;
+    margin: -0.5em 1em 1.5em 0;
+    padding-bottom: 1em;
+    width: 100px;
+}
+
+/* View: employee detail */
+.employee {
+    background-color: white;
+    display: none;
+    float: left;
+    height: 400px;
+    margin-bottom: 2em;
+    margin-right: 3em;
+    padding: 2em;
+    width: 400px;
+}
+
+.employee:first-child {
+    display: block;
+}
+
+.employee-images {
+    background-color: white;
+    float: left;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+
+.img-thumbnail {
+    max-width: 80%;
+    height: 100%;
+}

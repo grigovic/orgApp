@@ -1,0 +1,47 @@
+{
+  "firstName": "lavi",
+  "lastName": "lapovsky",
+  "position": "dog",
+  "isManager": true,
+  "imageUrl":  "img/employees/1.jpg",
+  "tasks": [
+    {
+      "text": "eat",
+      "dueDate": "10.6.17"
+    },
+    {
+      "text": "eat",
+      "dueDate": "10.6.17"
+    },
+    {
+      "text": "eat",
+      "dueDate": "10.6.17"
+    }
+  ],
+  "subordinates": [
+    {
+      "id": "2",
+      "firstName": "tut",
+      "lastName": "lap",
+      "position": "cat"
+    },
+    {
+      "id": "3",
+      "firstName": "golda",
+      "lastName": "lap",
+      "position": "cat"
+    }
+
+  ],
+  "reports": [
+    {
+      "data": "sleep ok",
+      "createdDate": "12.3.12"
+    },
+    {
+      "data": "sleep ok",
+      "createdDate": "12.3.12"
+    }
+
+  ]
+}

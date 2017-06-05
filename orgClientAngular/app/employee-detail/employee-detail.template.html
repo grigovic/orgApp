@@ -1,0 +1,58 @@
+<div class="employee-profile">
+    <div class="employee-images">
+        <img ng-src="{{$ctrl.employee.picture}}" alt="{{$ctrl.employee.first_name}}" class="img-thumbnail"/>
+    </div>
+
+    <div class="employee-personal-detail">
+        <label>name</label>
+        <span>{{$ctrl.employee.name}}</span>
+    </div>
+
+    <div class="employee-personal-detail">
+        <label>Position</label>
+        <span>{{$ctrl.employee.position}}</span>
+    </div>
+
+    <div class="employee-personal-detail employee-manager-detail">
+        <label>Manager</label>
+        <span>{{$ctrl.employee.manager.name}}</span>
+        <button class="btn btn-default btn-info" ng-click="$ctrl.openSendReport()"
+                ng-disabled="$ctrl.employee.manager==undefined">Report
+        </button>
+    </div>
+</div>
+
+
+<div>
+    <h4>My Tasks</h4>
+    <ul class="thumbnail list">
+        <li class="clearfix" ng-repeat="task in $ctrl.employee.tasks">
+            <span class="col-sm-6 overflow-auto">{{task.text}}</span>
+            <span class="col-sm-6">{{task.due_date | date:'dd/MM/yyyy'}}</span>
+        </li>
+        <span class="no-entries-notification" ng-if="$ctrl.employee.tasks.length==0">No Entries</span>
+    </ul>
+</div>
+
+<div ng-if="$ctrl.employee.type=='Manager'">
+    <h4>My subordinates</h4>
+    <ul class="thumbnail list">
+        <li class="clearfix" ng-repeat="employee in $ctrl.employee.employees">
+            <span class="col-sm-6">{{employee.first_name}} {{employee.last_name}}</span>
+            <span class="col-sm-3 overflow-auto">{{employee.position}}</span>
+            <button class="btn btn-default btn-info " class="col-sm-3" ng-click="$ctrl.assignTask(employee.id)">Assign task</button>
+        </li>
+        <span class="no-entries-notification" ng-if="$ctrl.employee.employees.length==0">No Entries</span>
+    </ul>
+</div>
+
+<div ng-if="$ctrl.employee.type=='Manager'">
+    <h4>My reports</h4>
+    <ul class="thumbnail list">
+        <li class="clearfix" ng-repeat="report in $ctrl.employee.reports">
+            <span class="col-sm-6">{{report.text}}</span>
+            <span class="col-sm-6">{{report.created_at | date:'dd/MM/yyyy HH:mm' }}</span>
+        </li>
+        <span class="no-entries-notification" ng-if="$ctrl.employee.reports.length==0">No Entries</span>
+    </ul>
+</div>

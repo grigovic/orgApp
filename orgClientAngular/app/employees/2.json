@@ -1,0 +1,23 @@
+{
+  "firstName": "tut",
+  "lastName": "lapovsky",
+  "position": "cat",
+  "isManager": false,
+  "imageUrl":  "img/employees/2.jpg",
+  "tasks": [
+    {
+      "text": "eat",
+      "dueDate": "10.6.17"
+    },
+    {
+      "text": "eat",
+      "dueDate": "10.6.17"
+    },
+    {
+      "text": "eat",
+      "dueDate": "10.6.17"
+    }
+  ]
+}
+
+
